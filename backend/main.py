@@ -21,8 +21,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model('savedmodels/1')
-# MODEL = tf.keras.saving.load_model('../savedmodels/1')
+MODEL = tf.keras.models.load_model('../savedmodels/3')
 
 CLASS_NAMES = ["Benign", "Malignant"]
 
