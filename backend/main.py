@@ -11,6 +11,11 @@ app = FastAPI()
 origins = [
     "http://localhost",
     "http://localhost:3000",
+    "http://localhost:8000",
+    "http://127.0.0.1",
+    "http://127.0.0.1:3000",
+    "http://127.0.0.1:3001",
+    "http://127.0.0.1:8000",
 ]
 
 app.add_middleware(
@@ -23,7 +28,7 @@ app.add_middleware(
 
 MODEL = tf.keras.models.load_model('../savedmodels/3')
 
-CLASS_NAMES = ["Benign", "Malignant"]
+CLASS_NAMES = ["Benign", "Malignant", "None"]
 
 @app.get("/ping")
 async def ping():
@@ -34,13 +39,14 @@ def read_file_as_image(data) -> np.ndarray:
     return image
 
 @app.post("/predict")
-async def predict(
-    file: UploadFile = File(...)
-):
+async def predict( file: UploadFile = File(...)):
+    print("Called succesfully")
     image = read_file_as_image(await file.read())
     img_batch = np.expand_dims(image, 0)
     
     predictions = MODEL.predict(img_batch)
+    
+    print("preds : ", predictions)
 
     predicted_class = CLASS_NAMES[np.argmax(predictions[0])]
     confidence = np.max(predictions[0])

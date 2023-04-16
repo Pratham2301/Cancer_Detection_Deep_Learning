@@ -2,3 +2,5 @@ documents/
 resources/
 /Model1_15epochs_81percent.pdf
 /Team-A2-Presentation1.pptx
+gcp/final.h5
+gcp/gcp_amd_instance.txt
