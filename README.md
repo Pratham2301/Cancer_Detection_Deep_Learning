@@ -1,6 +1,8 @@
 # SkinGenics - An application to classify your cancerious lesions into benign or malignant
 
-## SkinGenics helps you to predict your skin cancer between Benign and Malignant. It integrates Deep Learning technology with your device’s camera to help you capture and analyse skin lesions. SkinGenics has more than 96% accuracy
+## <a href="https://skingenics.netlify.app/" >View Deployment</a>
+
+## SkinGenics helps you to predict your skin cancer between Benign and Malignant. It integrates Deep Learning technology with your device’s camera to help you capture and analyse skin lesions with more than 96% accuracy
 
 `Please Note: This application is built for learning purpose `
 
@@ -8,6 +10,24 @@
 SkinGenics is a Skin-Cancer prediction application that uses CNN and Deep learning technology to calculate the probability that a skin lesions is Benign or Malignant, by comparing its appearance to thousands of other lesion images. SkinGenics has more than 96% accuracy
 
 1. Upload Picture of Your Skin Lesion
+
 2. SkinGenics will compare it with thousands of similar lesion images
+
 3. SkinGenics will predict the class of cancer
 
+
+# Folder Structure
+
+1. Dataset : Contains `ISIC 2018-HAM10000 Kaggle Dataset` (nearly 33%)
+
+2. Backend : Contains `Fast-Api` configuration to serve model
+
+3. Frontend : Contains `React.js` codebase to serve UI
+
+4. Google-Cloud   
+  i] Contains `Google-Cloud-Functions` Configuration to serve backend (GCP Service) <br>
+  ii] Details to build MODEL using Jupyter Notebook on `GCP VM Instance - AMD Machine. (SSH Commands)`
+  
+5. SavedModels : Stores model versions with various epochs and model architecture
+
+6. Training : Stores notebook for current `Convolutional Neural Network (CNN)` Model
