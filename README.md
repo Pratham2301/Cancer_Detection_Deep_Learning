@@ -16,6 +16,22 @@ SkinGenics is a Skin-Cancer prediction application that uses CNN and Deep learni
 3. SkinGenics will predict the class of cancer
 
 
+# Google Cloud 
+
+  <ol type="I">
+  
+  <li> 'Google-Cloud-Functions' is used to serve backend (GCP Service) <br>
+        Backend URL - https://us-central1-cancer-detection-deep-learning.cloudfunctions.net/predict </li> <br>
+      
+  <li> Model is built using Jupyter Notebook on 'GCP VM Instance - AMD Machine' <br>
+        Instance IP - http://34.168.91.133:5000 (SSH Commands) </li> <br>
+  
+  <li> GCP Buckets are used to store dataset and save models (.h5) </li>
+  
+  </ol>
+  
+  
+
 # Folder Structure
 
 1. Dataset : Contains `ISIC 2018-HAM10000 Kaggle Dataset` (nearly 33%)
@@ -24,9 +40,7 @@ SkinGenics is a Skin-Cancer prediction application that uses CNN and Deep learni
 
 3. Frontend : Contains `React.js` codebase to serve UI
 
-4. Google-Cloud   
-  i] Contains `Google-Cloud-Functions` Configuration to serve backend (GCP Service) <br>
-  ii] Details to build MODEL using Jupyter Notebook on `GCP VM Instance - AMD Machine. (SSH Commands)`
+4. Google-Cloud : Contains GCP Configuration to serve backend
   
 5. SavedModels : Stores model versions with various epochs and model architecture
 
