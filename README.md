@@ -40,7 +40,7 @@ SkinGenics is a Skin-Cancer prediction application that uses CNN and Deep learni
 
 3. Frontend : Contains `React.js` codebase to serve UI
 
-4. Google-Cloud : Contains GCP Configuration to serve backend
+4. GCP : Contains `Google-Cloud` Configuration to serve backend
   
 5. SavedModels : Stores model versions with various epochs and model architecture
 
