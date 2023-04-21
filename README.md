@@ -20,7 +20,7 @@ SkinGenics is a Skin-Cancer prediction application that uses CNN and Deep learni
 
   <ol type="I">
   
-  <li> 'Google-Cloud-Functions' is used to serve backend (GCP Service) <br>
+  <li> 'Google-Cloud-Function' is used to serve backend (GCP Service) <br>
         Backend URL - https://us-central1-cancer-detection-deep-learning.cloudfunctions.net/predict </li> <br>
       
   <li> Model is built using Jupyter Notebook on 'GCP VM Instance - AMD Machine' <br>
