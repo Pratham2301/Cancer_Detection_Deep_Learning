@@ -20,15 +20,15 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model('../savedmodels/3')
+MODEL = tf.keras.models.load_model('final.h5')
 
-CLASS_NAMES = ["Benign", "Malignant", "None"]
+CLASS_NAMES = ["Benign", "Malignant"]
 
 @app.get("/ping")
 async def ping():
@@ -40,7 +40,10 @@ def read_file_as_image(data) -> np.ndarray:
 
 @app.post("/predict")
 async def predict( file: UploadFile = File(...)):
+    
     print("Called succesfully")
+    print(file)
+    
     image = read_file_as_image(await file.read())
     img_batch = np.expand_dims(image, 0)
     
