@@ -5,6 +5,7 @@ from keras.models import load_model
 from PIL import Image
 import numpy as np
 import functions_framework
+from io import BytesIO
 
 
 model = None
@@ -95,8 +96,6 @@ def predict(request):
     image = np.array(
         Image.open(image).convert("RGB").resize((224, 224)) # image resizing
     )
-
-    image = image/224 # normalize the image in 0 to 1 range
 
     img_array = tf.expand_dims(image, 0)
     predictions = model.predict(img_array)
