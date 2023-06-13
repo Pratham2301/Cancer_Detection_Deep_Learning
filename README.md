@@ -4,7 +4,9 @@
 
 ## NOTE
 ```
-Images should be stricltly benign or malignant as it is a binary classification and any random image will produce random output. 
+Images should be stricltly benign or malignant, as it is a binary classification
+
+Any random image (non cancerious lesion) will produce random output. 
 
 Skin lesion images taken without applying oilment and opening pores will produce incorrect output.
 ```
