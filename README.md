@@ -2,6 +2,13 @@
 
 ## <a href="https://skingenics.netlify.app/" >View Deployment</a>
 
+## NOTE
+```
+Images should be stricltly benign or malignant as it is a binary classification and any random image will produce random output. 
+
+Skin lesion images taken without applying oilment and opening pores will produce incorrect output.
+```
+
 ## SkinGenics helps you to predict your skin cancer between Benign and Malignant. It integrates Deep Learning technology with your device’s camera to help you capture and analyse skin lesions with more than 96% accuracy
 
 `Please Note: This application is built for learning purpose `
@@ -19,6 +26,9 @@ SkinGenics is a Skin-Cancer prediction application that uses CNN and Deep learni
 # Google Cloud 
 
   <ol type="I">
+  
+  <li> 'Google-Cloud-VM-Instance' is used to deploy React App <br>
+    Frontend URL - https://cancer-detection-deep-learning.de.r.appspot.com/ </li> <br>
   
   <li> 'Google-Cloud-Function' is used to serve backend (GCP Service) <br>
         Backend URL - https://us-central1-cancer-detection-deep-learning.cloudfunctions.net/predict </li> <br>
