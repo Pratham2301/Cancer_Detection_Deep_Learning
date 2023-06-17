@@ -1,6 +1,6 @@
 # SkinGenics - An application to classify your cancerious lesions into benign and malignant
 
-## <a href="https://skingenics.netlify.app/" >View Deployment</a>
+## <a href="https://skingenicss.netlify.app/" >View Deployment</a>
 
 ## NOTE
 ```
